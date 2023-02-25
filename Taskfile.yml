@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  run:
+    cmds:
+      - go run .
+
+  build:
+    env:
+      GOOS: linux
+      GOARCH: amd64
+    cmds:
+      - go build -v *.go
+
+  remove:
+    cmds:
+      - rm -rf main
